@@ -1,4 +1,6 @@
-﻿using System.Data.Entity;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
@@ -16,12 +18,15 @@ namespace FoodFun.Models
             // Add custom user claims here
             return userIdentity;
         }
+
+        [MaxLength(30)]
+        public string DisplayName { get; set; } // yazarın gözüken ismi
+        public virtual ICollection<Product> Products { get; set; } // navigation property her yazarın ürünü var
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+        public ApplicationDbContext() : base("ApplicationDbContext", throwIfV1Schema: false)
         {
         }
 
@@ -29,5 +34,19 @@ namespace FoodFun.Models
         {
             return new ApplicationDbContext();
         }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Product>()
+                .HasRequired(x=>x.Category)
+                .WithMany(x=>x.Products)
+                .HasForeignKey(x=>x.CategoryId)
+                .WillCascadeOnDelete(false);
+
+            base.OnModelCreating(modelBuilder);
+        }
+
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Product> Products { get; set; }
     }
 }
