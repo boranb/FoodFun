@@ -1,0 +1,10 @@
+﻿@model List<Category>
+
+<ul class="list-inline">
+    @foreach (var cats in Model)
+    {
+        <a href="#">
+            <li class="list-inline-item genric-btn primary small p-2">@cats.CategoryName</li>
+        </a>
+    }
+</ul>

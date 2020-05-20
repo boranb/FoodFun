@@ -50,11 +50,18 @@
                     </div>
                     <div class="main-menu">
                         <ul>
-                            <li class="active"><a href="index.html">home</a></li>
-                            <li><a href="about.html">about</a></li>
-                            <li><a href="menu.html">Menu</a></li>
-                            <li><a href="contact-us.html">contact</a></li>
-                            <li><a href="elements.html">Elements</a></li>
+                            <li class="nav-item">
+                                @Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link" })
+                            </li>
+                            <li class="nav-item">
+                                @Html.ActionLink("About", "About", "Home", null, new { @class = "nav-link" })
+                            </li>
+                            <li class="nav-item">
+                                @Html.ActionLink("About", "Menu", "Home", null, new { @class = "nav-link" })
+                            </li>
+                            <li class="nav-item">
+                                @Html.ActionLink("Contact", "Contact", "Home", null, new { @class = "nav-link" })
+                            </li>
                         </ul>
                     </div>
                 </div>
