@@ -1,7 +1,46 @@
-﻿
+﻿@model HomeIndexViewModel
 @{
     ViewBag.Title = "Menu";
+    Layout = "~/Views/Shared/_InfoLayout.cshtml";
 }
 
-<h2>Menu</h2>
+<div class="row">
+    <div class="col-md-5">
+        <div class="section-top">
+            <h3><span class="style-change">we serve</span> <br>delicious food</h3>
+            <p class="pt-3">They're fill divide i their yielding our after have him fish on there for greater man moveth, moved Won't together isn't for fly divide mids fish firmament on net.</p>
+        </div>
+    </div>
+</div>
 
+
+
+<div class="row">
+    <div class="col-md-12 mb-5">
+        @Html.Action("CategoriesPartial", "Home")
+    </div>
+</div>
+
+<div class="row">
+
+    <!-- Products-->
+    @foreach (var product in Model.Products)
+    {
+        <div class="col-md-4 col-sm-6">
+            <div class="single-food">
+                <div class="food-img">
+                    <img src="~/images/food6.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="food-content">
+                    <div class="d-flex justify-content-between">
+                        <h5>@product.Title</h5>
+                        <span class="style-change text-sm-right">₺@product.Price</span>
+                    </div>
+                    <p class="pt-3">@Html.Raw(@product.Content)</p>
+                </div>
+            </div>
+        </div>
+
+    }
+
+</div>

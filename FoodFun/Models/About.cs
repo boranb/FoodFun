@@ -22,6 +22,8 @@ namespace FoodFun.Models
         public string AboutTitle { get; set; }
         [StringLength(1000)]
         public string AboutContent { get; set; }
+        public string MapsLink { get; set; }
+        public string LogoPhotoPath { get; set; }
         [StringLength(50)]
         public string LongNotificationTitle { get; set; }
         [StringLength(300)]

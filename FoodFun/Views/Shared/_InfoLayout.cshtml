@@ -34,12 +34,12 @@
     </div>
     <!-- Preloader End -->
     <!-- Header Area Starts -->
-    <header class="header-area">
+    <header class="header-area header-area2">
         <div class="container">
             <div class="row">
                 <div class="col-lg-2">
                     <div class="logo-area">
-                        <a href="@Url.Action("Index","Home",null)"><img src="~/images/logo/logo.png" alt="logo"></a>
+                        <a href="@Url.Action("Index","Home",null)"><img src="~/images/logo/logo2.png" alt="logo"></a>
                     </div>
                 </div>
                 <div class="col-lg-10">
@@ -48,7 +48,7 @@
                         <span></span>
                         <span></span>
                     </div>
-                    <div class="main-menu">
+                    <div class="main-menu main-menu2">
                         <ul>
                             <li class="nav-item">
                                 @Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link" })
@@ -70,45 +70,17 @@
     </header>
     <!-- Header Area End -->
     <!-- Banner Area Starts -->
-    <section class="banner-area text-center">
+    <section class="banner-area banner-area2 @ViewBag.Title-bg text-center">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h6>the most interesting food in the world</h6>
-                    <h1>
-                        Discover the <span class="prime-color">flavors</span><br>
-                        <span class="style-change">of <span class="prime-color">food</span>fun</span>
-                    </h1>
+                    <h1><i>@ViewBag.Title</i></h1>
                 </div>
             </div>
         </div>
     </section>
     <!-- Banner Area End -->
-    <!-- Welcome Area Starts -->
-    <section class="welcome-area section-padding2">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-6 align-self-center">
-                    <div class="welcome-img">
-                        <img src="~/images/welcome-bg.png" class="img-fluid" alt="">
-                    </div>
-                </div>
-                <div class="col-md-6 align-self-center">
-                    <div class="welcome-text mt-5 mt-md-0">
-                        <h3><span class="style-change">welcome</span> <br>to food fun</h3>
-                        <p class="pt-3">Created god gathered don't you yielding herb you had. And isn't, god was saw. Dominion. Great sixth for in unto was. Open can't tree am waters brought. Divide after there. Was.</p>
-                        <p>
-                            Created god gathered don't you yielding herb you had. And isn't, god was saw. Dominion. Great sixth for in unto was. Open can't tree waters brought. Divide after there. Was. Created god gathered don't you yielding herb you had.
-                            And isn't god.
-                        </p>
-                        <a href="#" class="template-btn mt-3">book a table</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Welcome Area End -->
-    <!-- Food Area starts -->
+    <!-- Content Area starts -->
     <section class="food-area section-padding">
 
         <div class="container">
@@ -118,20 +90,7 @@
         </div>
 
     </section>
-    <!-- Food Area End -->
-    <!-- Reservation Area Starts -->
-    <div class="reservation-area section-padding text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2>Natural ingredients and testy food</h2>
-                    <h4 class="mt-4">some trendy and popular courses offerd</h4>
-                    <a href="" class="template-btn template-btn2 mt-4">reservation</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Reservation Area End -->
+    <!-- Content Area End -->
     <!-- Footer Area Starts -->
     <footer class="footer-area">
         <div class="footer-widget section-padding">

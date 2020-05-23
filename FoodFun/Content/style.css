@@ -8,6 +8,26 @@ body {
     font-weight: 400
 }
 
+.google-maps {
+    overflow: hidden;
+    resize: none;
+    max-width: 100%;
+    width: 1110px;
+    height: 500px;
+}
+
+.google-maps-iframe {
+    height: 100%;
+    width: 100%;
+    border: 0;
+}
+
+#googlemaps-display {
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+}
+
 h1 {
     color: #fff;
     font-family: "Playfair Display",serif;
@@ -428,11 +448,11 @@ input:focus, textarea:focus {
         color: #fff
     }
 
-.menu-bg {
+.Menu-bg {
     background-image: url("../images/menu-bg.jpg")
 }
 
-.contact-bg {
+.Contact-bg {
     background-image: url("../images/contact-bg.jpg")
 }
 
@@ -3149,15 +3169,15 @@ h6 {
         }
 
 .section-padding {
-    padding: 130px 0
+    padding: 40px 0
 }
 
 .section-padding2 {
-    padding-top: 130px
+    padding-top: 40px 40px
 }
 
 .section-padding3 {
-    padding-bottom: 130px
+    padding-bottom: 40px 
 }
 
 .section-padding4 {
